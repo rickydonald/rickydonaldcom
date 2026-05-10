@@ -1,0 +1,58 @@
+---
+import "../styles/global.css";
+
+const links = [
+  {
+    name: "Instagram",
+    href: "https://www.instagram.com/rickydonald28/",
+  },
+  {
+    name: "GitHub",
+    href: "https://www.github.com/rickydonald",
+  },
+  {
+    name: "Email to mail@rickydonald.com",
+    href: "mailto:mail@rickydonald.com",
+  }
+]
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Ricky Donald</title>
+	</head>
+	<body>
+		 <main class="flex items-center justify-center text-center mx-auto text-gray-300 p-4 max-w-3xl min-h-screen">
+      <div class="wrapper">
+        <img
+          src="/rdcom_white.svg"
+          alt="Rickydonaldcom Logo"
+          class="mb-4"
+          width={400}
+        />
+        <hr class="mt-5 py-5 block" />
+        <p class="text-justify text-base leading-relaxed">
+          Hello there, just a boring guy on the internet. So basically I know nothing about anything, but for a fact I like trains, airplanes, anime, politics, and computers. I can talk about them for hours!
+          <br /><br />
+          I don't know why but I do most of my productive work during the night (yes, my sleep schedule is ruined). And for an another fact, I am scared of people actually... but I also love them... such a weird paradox right?
+          <br /><br />
+          I somewhat code myself, created severals websites and apps. Most of them are experiments and this one is no exception.
+        </p>
+        <hr class="mt-5 py-2 block" />
+        <p class="text-justify text-base leading-relaxed">You can reach me via</p>
+        <div class="flex items-center gap-3 flex-wrap">
+          {links.map(link => (
+            <a href={link.href} class="text-sky-600 hover:underline" target="_blank" rel="noopener noreferrer">
+              {link.name}
+            </a>
+          ))}
+        </div>
+      </div>
+    </main>
+	</body>
+</html>
